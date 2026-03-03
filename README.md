@@ -64,8 +64,7 @@ CosmoQuest integrates AI for:
 - Clerk Authentication  
 
 ### Backend
-- Python (FastAPI / Flask)  
-- REST API Architecture  
+- Python (Flask)  
 - JWT Authentication  
 
 ### External APIs
