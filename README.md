@@ -1,16 +1,75 @@
-# React + Vite
+ # 🚀 CosmoQuest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CosmoQuest is an AI-powered Space Awareness and Career Guidance Platform designed to help users explore astronomical events, understand space science, and discover career opportunities in the space domain.
 
-Currently, two official plugins are available:
+It combines real-time space data, AI-based predictions, and an interactive community system to create a smart learning ecosystem.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌌 Problem Statement
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Most space-related platforms either:
+- Provide raw data without explanation, or
+- Offer static learning content without real-time relevance.
 
-## Expanding the ESLint configuration
+CosmoQuest bridges this gap by integrating AI to predict recurring space events, assist users with doubts, and guide them toward space-related careers.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Key Features
+
+### 1️⃣ Space Events Module
+- Fetches real-time astronomical data using NASA APIs  
+- Displays upcoming celestial events  
+- Provides simplified explanations  
+
+### 2️⃣ AI Event Prediction Engine
+- Analyzes historical space event data  
+- Predicts possible recurrence patterns  
+- Helps users understand frequency and cycles  
+
+### 3️⃣ AI Chat Assistant
+- Answers astronomy-related questions  
+- Assists with career guidance in the space domain  
+- Supports users in discussion forums  
+
+### 4️⃣ Global Space Forum
+- Users can post sky observations  
+- Ask questions  
+- Share knowledge  
+- Community-driven discussions  
+
+### 5️⃣ Secure Authentication
+- Clerk-based authentication  
+- JWT verification in backend  
+
+---
+
+## 🧠 AI Integration
+
+CosmoQuest integrates AI for:
+
+- Event recurrence prediction  
+- Intelligent chatbot support  
+- Context-aware doubt clarification  
+- Future scope: personalized learning paths  
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- React.js  
+- Tailwind CSS  
+- Clerk Authentication  
+
+### Backend
+- Python (FastAPI / Flask)  
+- REST API Architecture  
+- JWT Authentication  
+
+### External APIs
+- NASA Open APIs  
+
+---
+ 
