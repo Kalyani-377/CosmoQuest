@@ -1,6 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { useClerk } from "@clerk/clerk-react";
-import UserMenu from "./usermenu";
+import UserMenu from "./UserMenu";
 
 export default function TopNavbar() {
     const navigate = useNavigate();
