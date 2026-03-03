@@ -1,0 +1,219 @@
+/* LOGIN SCREEN */
+.login-container {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at 20% 10%, #120162, #000000 80%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 20 30 20 30;
+    --parallax-x: 0px;
+    --parallax-y: 0px;
+    transform: translate(var(--parallax-x), var(--parallax-y));
+
+}
+
+/* ---------------------------------------------- */
+/* 1️⃣ ROTATING NEBULA (BEHIND LOGIN BOX)         */
+/* ---------------------------------------------- */
+.login-nebula {
+    position: absolute;
+    width: 1200px;
+    height: 1200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+
+    /* background:
+        radial-gradient(circle at 30% 30%, rgba(180, 80, 255, 0.25), transparent 70%),
+        radial-gradient(circle at 50% 50%, rgba(80, 150, 255, 0.22), transparent 75%),
+        radial-gradient(circle at 40% 40%, rgba(255, 50, 150, 0.18), transparent 80%); */
+
+    filter: blur(140px) brightness(1.2);
+    animation: nebulaRotate 40s linear infinite;
+}
+
+@keyframes nebulaRotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* ---------------------------------------------- */
+/* 2️⃣ MORE BRIGHT STARS                          */
+/* ---------------------------------------------- */
+.login-stars,
+.login-stars2,
+.login-stars3,
+.login-starsMega {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.login-stars {
+    background-image:
+        radial-gradient(2px 2px at 20% 20%, #ffffff, transparent),
+        radial-gradient(2px 2px at 70% 40%, #ffffff, transparent),
+        radial-gradient(3px 3px at 40% 70%, #ffffff, transparent);
+    opacity: 0.7;
+    animation: blinkStars 3s infinite ease-in-out alternate;
+}
+
+.login-stars2 {
+    background-image:
+        radial-gradient(1.5px 1.5px at 10% 80%, #cfcfcf, transparent),
+        radial-gradient(1.5px 1.5px at 90% 30%, #dcdcdc, transparent),
+        radial-gradient(2px 2px at 60% 50%, #ffffff, transparent);
+    opacity: 0.45;
+    animation: blinkStars 4s infinite alternate;
+}
+
+.login-stars3 {
+    background-image:
+        radial-gradient(2px 2px at 30% 50%, #fff, transparent),
+        radial-gradient(3px 3px at 80% 20%, #fff, transparent),
+        radial-gradient(2px 2px at 50% 90%, #fff, transparent);
+    opacity: 0.35;
+    animation: blinkStars 5s infinite alternate;
+}
+
+/* Extra brighter mega stars */
+.login-starsMega {
+    background-image:
+        radial-gradient(3px 3px at 25% 30%, rgba(255, 255, 255, 1), transparent),
+        radial-gradient(4px 4px at 75% 60%, rgba(255, 255, 255, 1), transparent),
+        radial-gradient(3px 3px at 50% 20%, rgba(255, 255, 255, 1), transparent);
+    opacity: 0.85;
+    animation: megaBlink 2.5s infinite ease-in-out alternate;
+}
+
+@keyframes blinkStars {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+
+@keyframes megaBlink {
+    from {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+/* Purple glow */
+.login-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    /* background: radial-gradient(circle, rgba(143, 68, 254, 0.4), transparent); */
+    filter: blur(200px);
+}
+
+/* LOGIN BOX */
+.login-box {
+    width: 380px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    z-index: 10;
+    animation: fadeIn 1.2s ease-out;
+    box-shadow: 0 0 25px rgba(106, 80, 255, 0.18);
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Typography */
+.login-title {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+/* Inputs */
+.login-input {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    background: rgba(255, 255, 255, 0.348);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    color: #fff;
+    font-family: "Poppins";
+    outline: none;
+}
+
+/* Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: rgba(20, 93, 252, 0.3);
+    border: 1px solid rgba(150, 180, 255, 0.6);
+    border-radius: 10px;
+    color: white;
+    font-family: "Orbitron";
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    box-shadow:
+        0 0 18px rgba(160, 190, 255, 0.9),
+        0 0 35px rgba(120, 150, 255, 0.7),
+        inset 0 0 14px rgba(100, 140, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.login-btn:active {
+    transform: scale(0.97);
+    box-shadow:
+        0 0 10px rgba(120, 150, 255, 0.6),
+        inset 0 0 20px rgba(80, 120, 255, 0.8);
+}
+
+/* Footer text */
+.login-small {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.login-link {
+    color: #9fbfff;
+    cursor: pointer;
+}

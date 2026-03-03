@@ -1,0 +1,70 @@
+@keyframes loading-spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: loading-spin-slow 6s linear infinite;
+}
+
+.loading-planet {
+    background:
+        radial-gradient(circle at 30% 30%, #c4b5fd, #4228d9 45%, #2e1065 70%);
+    box-shadow:
+        inset -12px -12px 20px rgba(0, 0, 0, 0.6),
+        inset 6px 6px 15px rgba(255, 255, 255, 0.1),
+        0 0 90px rgba(124, 58, 237, 0.5);
+    animation: loading-planetRotate 10s linear infinite;
+}
+
+@keyframes loading-planetRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loading-atmosphere {
+
+    0%,
+    100% {
+        box-shadow: 0 0 30px rgba(70, 58, 237, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 60px rgba(182, 150, 236, 0.6);
+    }
+}
+
+.loading-planet {
+    animation: loading-planetRotate 10s linear infinite, loading-atmosphere 4s ease-in-out infinite;
+}
+
+.loading-ring {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    top: -25%;
+    left: -25%;
+    animation: loading-ringSpin 6s linear infinite;
+}
+
+@keyframes loading-ringSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

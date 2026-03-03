@@ -1,0 +1,28 @@
+.event-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: transform 0.2s ease;
+
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+}
+
+.event-card h3 {
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+
+.event-card p {
+    color: #9fb3ff;
+    margin-bottom: 8px;
+}
+
+.event-card span {
+    font-size: 14px;
+    opacity: 0.8;
+}
